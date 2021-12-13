@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  nrna-mysql:
+    image: mariadb:10.5.8
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+    volumes:
+      - "./scripts/schema.sql:/docker-entrypoint-initdb.d/1.sql"
+  app:
+    image: registry.ybcsystems.com/ybcteam/nrna-monolith
+    build:
+      context: ./
+    environment:
+      DB_HOST: "nrna-mysql"
+      DB_PASSWORD: "secret"
+      APP_ENV: "production"
+      REDIRECT_HTTPS: "false"
+      APP_URL: "http://localhost:8080"
+    ports:
+      - 8080:80
+    links:
+      - nrna-mysql:db
