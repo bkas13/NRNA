@@ -1,0 +1,21 @@
+.footer{
+  background-color: $tertiary-background;
+  &_wrapper{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: $primary-text;
+    .copyright{
+      font-size: 14px;
+    }
+    .designed_by{
+      font-size: 14px;
+      a{
+        color: $primary-text;
+        &:hover{
+          color: $primary-light-text;
+        }
+      }
+    }
+  }
+}

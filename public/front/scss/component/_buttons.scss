@@ -1,0 +1,39 @@
+.btn-lg{
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+  padding: 13px 40px;
+  font-size: 16px;
+  &:hover{
+    text-decoration: none;
+    background-color: $tertiary-background;
+    color: white;
+    @include transition;
+  }
+}
+.btn-md{
+  border: 1px solid white;
+  border-radius: 30px;
+  color: white;
+  padding: 8px 30px;
+  font-size: 14px;
+  &:hover{
+    text-decoration: none;
+    @include transition;
+    color: white;
+    background-color: $tertiary-background;
+  }
+}
+.btn-sm{
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  color: $primary-color;
+  padding: 6px 15px;
+  font-size: 13px;
+  &:hover{
+    text-decoration: none;
+    @include transition;
+    color: white;
+    background-color: $tertiary-background;
+  }
+}

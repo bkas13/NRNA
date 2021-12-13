@@ -1,0 +1,46 @@
+.event_card{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  &_content{
+    flex: 1;
+    margin-right: 30px;
+  }
+  &_title{
+    font-size: 18px;
+    color: $primary-color;
+    font-weight: bold;
+    padding-left: 24px;
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  }
+  &_date{
+    font-size: 12px;
+    color: $secondary-text;
+    padding: 16px 0;
+    font-size: 500;
+  }
+  &_description{
+    font-size: 12px;
+    text-align: justify;
+    color: #6b6969;
+  }
+  .img_wrapper{
+    width: 200px;
+    height: 140px;
+    img{
+      height: inherit;
+      width: inherit;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+  }
+  .btn-sm{
+    margin-top: 15px;
+    display: inline-block;
+  }
+}

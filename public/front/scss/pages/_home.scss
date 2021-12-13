@@ -1,0 +1,112 @@
+.tagline{
+  padding: 45px;
+  text-align: center;
+  background-color: $secondary-background;
+  .tagline_title{
+    width: 75%;
+    margin: 0 auto;
+     color: #6d6c6c;
+     margin-bottom: 30px;
+     font-size: 16px;
+  }
+  .tagline_name{
+    color: $secondary-text;
+  }
+}
+.about{
+  padding: 90px 0px;
+  .img_container{
+    padding: 45px;
+    img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: 45px;
+    border-radius: 15px;
+    transform: rotate(-9deg);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #8a9ac7;
+    }
+  }
+  &_title{
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 30px;
+    &::after{
+      position: absolute;
+      content: "";
+      width: 50px;
+      border-bottom: 3px solid $primary-color;
+      left: 0;
+      bottom: 0px;
+    }
+  }
+  &_description{
+    font-size: 15px;
+    color: $secondary-light-text;
+  }
+}
+.political{
+  padding: 90px 0;
+  background-color: $primary-background;
+  &_wrapper{
+    width: 90%;
+    margin: 0 auto;
+  }
+  &_title{
+   @extend .about_title;
+   text-align: center;
+   &::after{
+    right: 0;
+    margin: 0 auto;
+   }
+
+  }
+  &_item{
+    box-shadow: 0px 3px 4px #eaeaea;
+    margin: 30px 16px;
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 5px;
+    
+    &:hover{
+      text-decoration: none;
+      @include transition;
+      box-shadow: 0px 3px 20px #dbdada;
+    }
+    .img_container{
+      height: 250px;
+      width: 100%;
+      overflow: hidden;
+      img{
+        height: inherit;
+        width: inherit;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+    }
+    &_title{
+      font-size: 18px;
+      font-weight: bold;
+      color: $secondary-text;
+      padding: 10px 15px 0px 15px;
+    }
+    &_subtitle{
+      padding: 5px 15px 15px 15px;
+      font-size: 14px;
+      color: $secondary-light-text;
+    }
+  }
+}
